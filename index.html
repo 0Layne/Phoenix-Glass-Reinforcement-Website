@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="navtab.css">
+<link rel="stylesheet" href="hope.css">
+<link rel="stylesheet" href="other.css">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+<link rel="icon" href="phxlogo.png" type="image/png">
+<title> Phoenix Glass Reinforcement | Security Reinforcement</title>
+
+  </head>
+  <body>
+  <!--The hamburger menu AND nav-->
+<nav id="navbar">
+  <div class="nav-left">
+    <ul id="nav-links">
+      <li><a href="index.html#section1"><i style="color: #A5A5A8;" class="fa-solid fa-house home-icon"></i></a></li>
+      <li class="dash">|</li>
+      <li><a href="index.html#section4-5">About</a></li>
+      <li class="dash">|</li>
+      <li><a href="ourwork.html">Services</a></li>
+      <li class="dash">|</li>
+      <li><a href="index.html#security-section">Our Work</a></li>
+      <li class="dash">|</li>
+      <li><a href="ourwork.html#contact-box">Contact</a></li>
+      <li class="dash">|</li>
+      <li><a href="index.html#section6">Media</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <button class="schedule-btn" onclick="window.location.href='ourwork.html#contact-box'">Request a Free Quote</button>
+    <a href="#" class="logo hidden"><img class="carsen-logo" src="phxlogo.png" alt="Logo"></a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</nav>
+
+<!--schedule/call button to logo animation-->
+<script>
+  document.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+    const logo = document.querySelector(".nav-right .logo");
+    if (window.scrollY > 650) {
+      navbar.classList.add("scrolled");
+      logo.classList.remove("hidden");
+    } else {
+      navbar.classList.remove("scrolled");
+      logo.classList.add("hidden");
+    }
+  });
+
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+
+</script>
+
+
+
+
+
+
+
+  <!-- Section 1: Titlee, Tinted background and NNav bar-->
+
+
+<section id="section1">
+  <video autoplay loop muted playsinline class="bg-video">
+    <source src="video/home-background.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
+  <div class="animate-section" data-aos="fade-up" id="home-logo-title"></div>
+</section>
+
+
+  <!-- border between section 1 and section 2 -->
+  <div class="section-border">
+      <div class="scroll-arrow"  onclick="scrollToSection('scrolltome')">
+      <i class="fa-solid fa-arrow-down" style="color: white;"></i> <!-- Unicode for down arrow -->
+      </div>
+  </div>
+
+
+
+
+
+
+  <section class="animate-section" data-aos="fade-up">
+    <h1 class="section1-title scroll-animate">
+      Reinforcing The Weakest 
+      <span class="border-title-split">Point of Entry</span>
+    </h1>
+    <hr style="background-color: rgb(255, 255, 255);" class="line scroll-animate">
+  </section>
+
+
+
+
+
+
+
+<div id="discountSlideout" class="discount-slideout hidden">
+  <button id="closeSlideout" class="close-btn">&times;</button>
+  <h1>10% Off</h1>
+  <hr class="percent-line">
+  <div class="percentoff"><p>U.S.<br>Military</p></div>
+  <div class="percentoff"><p>Senior<br>Citizens</p></div>
+  <div class="percentoff"><p>First<br>Responders</p></div>
+</div>
+
+<!--discount pop up-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slideout = document.getElementById("discountSlideout");
+    const closeBtn = document.getElementById("closeSlideout");
+    const showSection = document.querySelector(".services-section"); // Section that triggers showing
+    const hideSection = document.getElementById("section1"); // Section that triggers hiding
+
+    // Show slideout when `.services-section` is in view
+    const showObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          slideout.classList.remove("hidden"); // Ensure it's visible
+          slideout.classList.add("show");
+        }
+      });
+    }, { threshold: 10.5 });
+
+    // Hide slideout when `#section1` is in view
+    const hideObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          slideout.classList.remove("show");
+          slideout.classList.add("hidden");
+        }
+      });
+    }, { threshold: 10.5 });
+
+    if (showSection) {
+      showObserver.observe(showSection);
+    }
+    if (hideSection) {
+      hideObserver.observe(hideSection);
+    }
+
+    // Close slideout manually
+    closeBtn.addEventListener("click", () => {
+      slideout.classList.remove("show");
+      slideout.classList.add("hidden");
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+  
+<!--First section of the services box-->
+<section class="animate-section scrolltome" data-aos="fade-up">
+<div class="services-section scroll-animate">
+  <a href="ourwork.html#door-reinforcment" style="text-decoration: none;">
+    <div class="service-box">
+    <div class="logo-container">
+      <i class="fa-solid fa-door-closed icon-circle"></i>
+    </div>
+    <div class="box-content">
+      <h3>Door <br class="service-space">Reinforcement </h3>
+      <hr class="line-service" >
+      <p>We team up with Night Lock to strengthen the door security, safeguarding your home and or business against
+        break-ins.
+        Providing a
+        barricade to protect your valuables, product, loved ones/customers and overall safty!</p>
+        <span class="service-details">&#9432; Details</span>
+    </div>
+  </div></a>
+
+  <a href="ourwork.html#glass-reinforcment" style="text-decoration: none;">
+    <div class="service-box">
+    <div class="logo-container">
+      <i class="fa-solid fa-person-through-window icon-circle"></i>
+    </div>
+    <div class="box-content">
+      <h3>Glass <br class="service-space"> Reinforcement</h3>
+      <hr class="line-service">
+      <p>We apply security film to glass which greatly enhances its structural integrity, making it much more difficult to gain
+      inside access of a building or home.</p>
+      <span class="service-details">&#9432; Details</span>
+    </div>
+  </div></a>
+
+  <a href="ourwork.html#window-frame" style="text-decoration: none;"><div class="service-box">
+    <div class="logo-container">
+      <i class=" fa-regular fa-square icon-circle"></i>
+    </div>
+    <div class="box-content">
+      <h3>Frame <br class="service-space">Reinforcement</h3>
+      <hr class="line-service">
+      <p>Windows are typically seen as one of the weakest points of a home. ShieldX will strengthen the frames by incorporating
+      steel brackets and upgrading the hardware and locks</p>
+      <span class="service-details">&#9432; Details</span>
+    </div>
+  </div></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--second section of the services box-->
+<div class="services-section scroll-animate second-service-section">
+  <a href="ourwork.html#lock-reinforcment" style="text-decoration: none;">
+    <div class="service-box">
+      <div class="logo-container">
+        <i class="fa-solid fa-lock icon-circle"></i>
+      </div>
+      <div class="box-content">
+        <h3>Lock<br class="service-space"> Reinforcement</h3>
+        <hr class="line-service">
+        <p>Strengthening the area around a door’s lock to prevent forced entry.
+          Proper lock reinforcement ensures that the most vulnerable part of your door remains secure.
+        </p>
+        <span class="service-details">&#9432; Details</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="ourwork.html#window-tint" style="text-decoration: none;">
+    <div class="service-box">
+      <div class="logo-container">
+        <i class="fa-solid fa-droplet icon-circle"></i>
+      </div>
+      <div class="box-content">
+        <h3>Window<br class="service-space"> Tint</h3>
+        <hr class="line-service">
+        <p>With our tint and security film package, you can eliminate
+        those unsightly screens that need replacing every five years.</p>
+        <span class="service-details">&#9432; Details</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="ourwork.html#decal-install" style="text-decoration: none;">
+    <div class="service-box">
+      <div class="logo-container">
+        <i class="fa-solid fa-tarp icon-circle"></i>
+      </div>
+      <div class="box-content">
+        <h3>Decal<br class="service-space"> Installation</h3>
+        <hr class="line-service">
+        <p>We ensure precise placement, smooth finishes, and bubble-free results, enhancing the visibility and appearance of your
+        branding or messaging.</p>
+        <span class="service-details">&#9432; Details</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="button-container">
+  <button class="learn-button" onclick="window.location.href='ourwork.html#container2'">Learn More</button>
+  <button class="schedule-button"  onclick="window.location.href='ourwork.html#contact-box'">Schedule Now</button>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Our Mission-->
+<section id="section4" class="section4">
+  <h2 class="section4h2 scroll-animate">Our Mission</h2>
+  <div class="section4-container">
+    <div class="section4-left-div scroll-animate">
+      <h2>Fortifying Entrances. Protecting What Matters.</h2>
+    </div>
+    <div class="section4-right-div scroll-animate">
+      <p>
+        At Phoenix Reinforcement, our mission is to provide homes and businesses with cutting-edge security reinforcement
+        solutions.<br><br>
+        From window security film and tint to door and lock reinforcements, we strengthen the most vulnerable entry
+        points to deter
+        threats and enhance safety. Our expert installations ensure durability, discretion, and peace of mind—because
+        real
+        security starts at the foundation.
+      </p>
+      <a href="ourwork.html" class="animated-button" target="_blank">Learn More!
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <section class="security-section crime-prevention" id="security-section">
+    <div class="security-container">
+      <div class="security-text scroll-animate">
+        <h2 class="security-crime scroll-animate">Crime</h2>
+        <h2 class="scroll-animate">Protecting Your Property Against Crime</h2>
+        <p>
+          In areas with elevated crime rates, safeguarding your home or business is paramount. Implementing security
+          measures such as window films, door and frame reinforcements, and robust lock systems can significantly deter
+          break-ins and vandalism.<span class="mobile-security"> Notably, cities like St. Louis, Detroit, Baltimore, Memphis, and Kansas City have
+          reported higher crime statistics. Enhancing your property's defenses in these regions is essential for peace of
+          mind.
+        </p></span>
+        <a href="crimeweather.html" class="animated-button scroll-animate" target="_blank">Learn More!
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="security-section weather-prevention">
+    <div class="security-container">
+      <div class="security-text scroll-animate">
+        <h2 class="security-weather scroll-animate">Weather</h2>
+        <h2 class="scroll-animate">Weatherproofing Your Property</h2>
+      <p>
+        Extreme weather conditions can pose a significant threat to your property, with high winds, flying debris, and
+        heavy storms leading to shattered windows and structural damage. States like Florida, Texas, Louisiana,
+        Alabama, and North Carolina frequently experience hurricanes and severe storms, making reinforcement solutions
+        essential.
+      </p>
+      <p class="mobile-security">
+        Installing impact-resistant security film, reinforced window and door frames, and high-strength locking mechanisms
+        can help prevent breakage, reduce interior damage, and protect occupants from hazardous debris. Our solutions ensure
+        your property remains secure, no matter the conditions.
+      </p>
+        <a href="crimeweather.html" class="animated-button" target="_blank">Learn More!
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+    <div style="margin: 0 auto; padding: 0px;"></div>
+
+
+
+  <div id="section5">
+    <section class="animate-section section5" data-aos="fade-up">
+    <section class="youtube-container">
+      <iframe width="100%" height="100%s" src="https://www.youtube.com/embed/O27gAip-VAM?si=58vQoKop6jZAr6Cd"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    </section>
+  </div>
+
+
+
+
+
+
+
+<div id="section4-5">
+  <div class="overlay1"></div>
+
+<section class="content-section4-5 scroll-animate" data-aos="fade-up">
+  <div class="container4-5">
+    <img src="photo/phxvan.png" alt="Placeholder Image" class="content-img">
+    <div class="text-box1">
+      <h2 class="title4-5">Why Us</h2>
+      <hr class="line4-5">
+      <p class="description4-5">
+        Phoenix Glass Reinforcement stands out for its commitment to quality and customer satisfaction. Our security
+        reinforcements are
+        designed to provide an extra layer of protection, making your property more resistant to break-ins and damage.
+        With years of experience and a focus on precision, We guarantee installations that not only enhance safety
+        but also blend seamlessly with your home or business's design. Trust us to secure what matters most.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="content-section1 scroll-animate" data-aos="fade-up">
+  <div class="container4-5-1">
+    <div class="text-box4-5">
+      <h2 class="title4-5">About Us</h2>
+      <hr class="line4-5">
+      <p class="description4-5 description4-5-1">
+        Phoenix Glass Reinforcement, based in Arizona, is committed to enhancing the security of your home or business with
+        expert reinforcement solutions. Specializing primarily in glass reinforcement, we also offer frame and door lock
+        reinforcement services. While we are based in Arizona, our team is willing to travel across the 48 contiguous states
+        (excluding Alaska and Hawaii) to provide top-quality protection. Every installation is customized to meet your specific
+        security needs, ensuring a perfect blend of durability and aesthetics.
+      </p>
+    </div>
+    <img src="photo/arizona3.jpg" alt="Placeholder Image" class="content-img4-5">
+  </div>
+</section>
+</div>
+
+
+
+
+
+
+
+<section id="section6">
+
+  <div class="social-buttons1">
+    <a class="social-tab-link" href="https://www.instagram.com/shieldxsolutions/?igsh=MTF5ZTBqZWsyZmFoNw%3D%3D" target="_blank">
+      <i style="color:#ffffff; font-size: 1.7rem;" class="fa-brands fa-square-instagram"></i>
+    </a>
+    <a class="social-tab-link" href="https://www.linkedin.com/in/Shield-X-79b965342/" target="_blank">
+      <i style="color:#ffffff; font-size: 1.7rem" class="fa-brands fa-linkedin"></i>
+    </a>
+    <a class="social-tab-link" href="https://www.tiktok.com/" target="_blank">
+      <i style="color:#ffffff; font-size: 1.7rem"  class="fa-brands fa-tiktok"></i>
+    </a>
+    <a class="social-tab-link" href="mailto:example@gmail.com?subject=Hello&body=I wanted to reach out to you!">
+      <i style="color:#ffffff; font-size: 1.7rem" class="fa-solid fa-envelope"></i>
+    </a>
+  </div>
+
+  <div class="social-tabs">
+    <img class="social-logo scroll-animate" src="phxlogo.png" alt="Logo" id="social-logo">
+    <p class="copyright">&copy;2025 by Phoenix Glass reinforcement. All rights reserved.</p>
+    <hr class="line3">
+    <div class="social-buttons">
+    <a class="social-tab-link" href="https://www.instagram.com/shieldxsolutions/?igsh=MTF5ZTBqZWsyZmFoNw%3D%3D" target="_blank">
+      <i style="color:#ffffff" class="fa-brands fa-square-instagram"></i>
+    </a>
+    <a class="social-tab-link" href="https://www.linkedin.com/in/Shield-X-79b965342/" target="_blank">
+      <i style="color:#ffffff" class="fa-brands fa-tiktok"></i>
+    </a>
+    <a class="social-tab-link" href="https://www.tiktok.com/" target="_blank">
+      <i style="color:#ffffff" class="fa-brands fa-facebook"></i>
+    </a>
+    <a class="social-tab-link" href="Info@phoenixglass.reinforcement?subject=Hello&body=I wanted to reach out to you!">
+      <i style="color:#ffffff" class="fa-solid fa-envelope"></i>
+    </a>
+    </div>
+  </div>
+  <section class="numemail">
+    <a href="tel:6024998179" class="phone" style="text-decoration: none; color: #d2cfcf;">602-499-8179</a>
+    <hr class="line4">
+    <div class="email">Info@phoenixglass.reinforcement</div>
+  </section>
+</section>
+
+
+
+
+
+<!--arrow drop down border-->
+<script>
+function scrollToSection(sectionId) {
+  const section = document.querySelector(`.${sectionId}`); // Find the section by class name
+  if (section) {
+    const offset = 130; // Adjust this value if you need to account for fixed headers or spacing
+    const sectionPosition = section.offsetTop - offset; // Get the section's position minus the offset
+    const currentPosition = window.scrollY; // Get the current scroll position
+    const distance = sectionPosition - currentPosition; // Calculate the distance to scroll
+    const duration = 1000; // Duration in milliseconds
+    const startTime = performance.now(); // Start time of the animation
+
+    // Smooth scrolling animation
+    function animateScroll(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1); // Progress between 0 and 1
+      const easeInOutQuad = progress < 0.5
+        ? 2 * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 2) / 2; // Ease-in-out effect
+      window.scrollTo(0, currentPosition + distance * easeInOutQuad); // Scroll to the new position
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll); // Continue animation
+      }
+    }
+
+    requestAnimationFrame(animateScroll); // Start the animation
+  }
+}
+
+
+</script>
+
+
+
+
+<!--Java scripts v -->
+<script
+ src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+
+</script>
+
+
+<!--java for sCrolling Animation for the text (The title)-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll('.animate-section');
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target); // Stop observing once the animation happens
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+</script>
+
+
+<!--IdK-->
+<script>
+  AOS.init({
+    once: true,  // This makes sure the animation only happens once
+    duration: 1000, // Animation duration in milliseconds
+  });
+</script>
+
+
+<!-- JavaScript for Hamburger Menu -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', (event) => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    event.stopPropagation(); // Prevents the click from triggering the document click event
+  });
+
+  // Close menu when clicking outside of it
+  document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+    }
+  });
+
+  // Smooth Scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      if (this.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const navbarHeight = document.querySelector('.navbar').offsetHeight;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+
+          // Close menu after clicking a link
+          navLinks.classList.remove('open');
+          hamburger.classList.remove('open');
+        }
+      }
+    });
+  });
+</script>
+
+
+
+<!--Java for the slide up and down for the nav bar scroll animation-->
+<script>
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+const triggerHeight = window.innerHeight * 0.71; // 69vh from the top
+
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (window.innerWidth > 1025) { // Only apply for desktop widths
+    if (scrollTop > triggerHeight) {
+      if (scrollTop > lastScrollTop) {
+        // Scroll Down - Hide Navbar
+        navbar.classList.add("nav-hidden");
+      } else {
+        // Scroll Up - Show Navbar
+        navbar.classList.remove("nav-hidden");
+      }
+    } else {
+      // If not past 69vh, keep navbar visible
+      navbar.classList.remove("nav-hidden");
+    }
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
+</script>
+
+
+
+<!--slow scrolling-->
+<script>
+  // Scale factor to reduce scroll speed (increase for slower scroll)
+  const scrollScale = 0.30; // was at 0.10. CHANGE BEFORE FINISH
+
+  window.addEventListener('wheel', (event) => {
+    event.preventDefault(); // Prevent the default scroll behavior
+    const scrollDistance = event.deltaY * scrollScale; // Scale down scroll distance
+    window.scrollBy({
+      top: scrollDistance,
+      left: 0,
+      behavior: 'smooth' // Smooth scroll effect
+    });
+  }, { passive: false }); // Set passive to false to allow preventDefault
+</script>
+
+
+
+<!--cookies for pop up( duration is 2 days for popp up)-->
+<script>
+  // Function to set a cookie
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000); // Expiration in days
+  document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+}
+
+// Function to get a cookie by name
+function getCookie(name) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(`${name}=`)) {
+      return cookie.split('=')[1];
+    }
+  }
+  return null;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("emailPopup");
+  const closePopup = document.getElementById("closePopup");
+  const emailForm = document.getElementById("emailForm");
+
+  // Check if the popup cookie exists
+  if (!getCookie("emailPopupShown")) {
+    setTimeout(() => {
+      popup.classList.remove("hidden");
+    }, 5000);
+  }
+
+  // Close the popup when "X" is clicked
+  closePopup.addEventListener("click", () => {
+    popup.classList.add("hidden");
+    setCookie("emailPopupShown", "true", 2); // Set cookie to expire in 2 days
+  });
+
+  // Handle form submission
+  emailForm.addEventListener("submit", (event) => {
+    popup.classList.add("hidden");
+    setCookie("emailPopupShown", "true", 2); // Set cookie to expire in 2 days
+  });
+
+  // Close the popup when clicking outside the content
+  popup.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      popup.classList.add("hidden");
+      setCookie("emailPopupShown", "true", 2); // Set cookie to expire in 2 days
+    }
+  });
+});
+</script>
+
+
+
+<!--Pop "Thank You" messages-->
+<script>
+  document.getElementById("emailForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent default form submission
+  
+  const form = event.target;
+  const formData = new FormData(form);
+
+  // Send form data using Fetch API
+  fetch(form.action, {
+    method: form.method,
+    headers: {
+      Accept: "application/json",
+    },
+    body: formData,
+  })
+    .then((response) => {
+      if (response.ok) {
+        alert("Thank you! You have successfully subscribed.");
+        form.reset(); // Reset the form
+        document.getElementById("emailPopup").classList.add("hidden"); // Close the popup
+        setCookie("emailPopupShown", "true", 2); // Set cookie to prevent popup
+      } else {
+        alert("There was an error. Please try again.");
+      }
+    })
+    .catch((error) => {
+      alert("There was an error. Please try again.");
+      console.error("Error:", error);
+    });
+});
+
+</script>
+
+
+
+<!--side animation for sections-->
+<script>
+  document.addEventListener("scroll", () => {
+    const isMobile = window.innerWidth <= 768; // Adjust breakpoint if needed
+
+    document.querySelectorAll(".scroll-animate").forEach((el) => {
+      const elementPosition = el.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.1;
+
+      if (elementPosition < screenPosition) {
+        el.classList.add("active");
+        el.classList.remove("scroll-out"); // Ensure scroll-out is removed
+      } else if (!isMobile) {
+        el.classList.remove("active"); // Reset animation only on larger screens
+      }
+    });
+
+    if (!isMobile) {
+      document.querySelectorAll(".scroll-out-100").forEach((el) => {
+        const elementPosition = el.getBoundingClientRect().top;
+        const scrollOutTrigger = 30;
+        if (elementPosition < scrollOutTrigger) {
+          el.classList.add("scroll-out");
+          el.classList.remove("active");
+        }
+      });
+
+      document.querySelectorAll(".scroll-out-20").forEach((el) => {
+        const elementPosition = el.getBoundingClientRect().top;
+        const scrollOutTrigger = -25;
+        if (elementPosition < scrollOutTrigger) {
+          el.classList.add("scroll-out");
+          el.classList.remove("active");
+        }
+      });
+    }
+  });
+
+  // Home-screen animation: Slide logo up from bottom
+  window.addEventListener("load", () => {
+    document.querySelectorAll(".title-animate").forEach((el) => {
+      setTimeout(() => {
+        el.classList.add("title-active");
+      }, 5);
+    });
+  });
+</script>
+
+
+
+
+</body>
+
+</html>

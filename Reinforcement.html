@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window, Lock, Door reinforcements</title>
+  <link rel="icon" href="phxlogo.png" type="image/png">
+
+  <link rel="stylesheet" href="LearnMorePage.css">
+  <link rel="stylesheet" href="navtab.css">
+  <link rel="stylesheet" href="learnmoremobile.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    #section1 {
+  background-image: url(photo/slider4.png);
+}
+.title-lower {
+  font-size: 60px;
+  margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<nav id="navbar">
+  <div class="nav-left">
+    <ul id="nav-links">
+      <li><a href="index.html#section1"><i style="color: #A5A5A8;" class="fa-solid fa-house home-icon"></i></a></li>
+      <li class="dash">|</li>
+      <li><a href="index.html#section4-5">About</a></li>
+      <li class="dash">|</li>
+      <li><a href="ourwork.html">Services</a></li>
+      <li class="dash">|</li>
+      <li><a href="index.html#security-section">Our Work</a></li>
+      <li class="dash">|</li>
+      <li><a href="ourwork.html#contact-box">Contact</a></li>
+      <li class="dash">|</li>
+      <li><a href="index.html#section6">Media</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <button class="schedule-btn" onclick="window.location.href='ourwork.html#contact-box'">Request a Free Quote</button>
+    <a href="#" class="logo hidden"><img class="carsen-logo" src="phxlogo.png" alt="Logo"></a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</nav>
+
+<!--schedule/call button to logo animation-->
+<script>
+  document.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+    const logo = document.querySelector(".nav-right .logo");
+    if (window.scrollY > 650) {
+      navbar.classList.add("scrolled");
+      logo.classList.remove("hidden");
+    } else {
+      navbar.classList.remove("scrolled");
+      logo.classList.add("hidden");
+    }
+  });
+
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+
+</script>
+
+
+
+  <div id="section1">
+    <section class="animate-section" data-aos="fade-up">
+
+      <section>
+        <h1 class="title">Window/Lock/Door<span class="title-lower" id="title-lower">Reinforcement</h1></span>
+
+      </section>
+    </section>
+  </div>
+  <div class="section-border">
+    <div class="scroll-arrow" onclick="scrollToSection('scrolltome')">
+      <i class="fa-solid fa-arrow-down"></i> <!-- Unicode for down arrow -->
+    </div>
+  </div>
+
+
+
+
+
+<div class="service1 scrolltome" id="window">
+  <p>At ShieldX, we specialize in providing premium security solutions for both residential and commercial properties. Our
+  services are designed to enhance the safety, durability, and protection of your home or business by preventing break-ins
+  and minimizing the risk of damage. We offer a comprehensive range of services, including window frame reinforcement,
+  door reinforcement, lock reinforcement, security window film installation, window tinting, and custom decals. Our team
+  of experts is committed to delivering high-quality installations that are tailored to meet your specific needs, ensuring
+  that your property is secure at all times.
+  </p>
+  <h2 class="scroll-animate">Window Frame Reinforcement</h2>
+  <hr class="line1">
+  <div class="animate-section" data-aos="fade-up" id="door">
+    <p>Window frame reinforcement is a crucial service for those looking to boost the security of their property. At ShieldX,
+    we focus on strengthening the window structures to make them more resistant to forced entry or damage from external
+    threats. By reinforcing your window frames with high-strength materials such as steel, we ensure that your windows are
+    less vulnerable to break-ins, vandalism, or even weather-related damage.
+    </p>
+
+    <p>Our installation process involves a thorough assessment of your current window frames to determine the most effective
+    reinforcement materials based on the unique requirements of your property. These materials are designed to blend
+    seamlessly with your existing architecture, providing a strong, invisible layer of protection. Once reinforced, your
+    windows will be much harder to break through, providing enhanced security and peace of mind.</p>
+  </div>
+
+
+  <h2 class="scroll-animate" id="decal">Door Reinforcement</h2>
+  <hr class="line1">
+  <div class="animate-section" data-aos="fade-up" id="lock">
+    <p>A strong door is one of the most important aspects of any security system. ShieldX offers expert door reinforcement
+    services that significantly increase the security of your property. Partnering with Night Lock, we provide advanced
+    solutions that help safeguard your home or business from break-ins. By reinforcing doors with high-strength materials
+    and secure locking systems, we offer enhanced protection for your family, employees, customers, and valuables.</p>
+
+    <p>Our door reinforcement service includes installing heavy-duty strike plates, reinforced hinges, and state-of-the-art
+    locking mechanisms that create an impenetrable barrier against intruders. Whether you need to secure an entry door or a
+    commercial door, we customize our services to ensure compatibility with your specific door type and security needs.</p>
+
+    <p>With ShieldX door reinforcement, you can rest assured knowing your property is protected by some of the most advanced
+    security systems available today.</p>
+  </div>
+
+  
+
+  <h2 class="scroll-animate" id="decal">Lock Reinforcement</h2>
+  <hr class="line1">
+  <div class="animate-section" data-aos="fade-up">
+    <p>Lock reinforcement is a critical service to improve the security of your doors and entry points. At ShieldX, we
+    specialize in fortifying the area around your door’s lock, making it more resistant to forced entry. Our service
+    includes the installation of reinforced strike plates, high-quality screws, and other materials that help distribute
+    impact forces, ensuring your door frame does not give way under pressure</p>
+
+    <p>Our lock reinforcement service not only increases the overall durability of your doors but also provides an additional
+    layer of security by preventing criminals from easily tampering with or breaking through the lock. We ensure that all
+    components are professionally installed to meet the highest security standards while maintaining the functionality and
+    appearance of your doors.</p>
+
+    <p>This added layer of protection offers peace of mind, knowing your property is more secure against break-ins and
+    unauthorized access.</p>
+  </div>
+</div>
+
+
+
+
+
+
+  <!-- java Hamburger menu-->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    // Toggle the "open" class for both the menu and hamburger
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+</script>
+
+<!--java for sCrolling Animation-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll('.animate-section');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target); // Stop observing once the animation happens
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>
+
+
+
+<!--arrow drop down border-->
+<script>
+function scrollToSection(sectionId) {
+  const section = document.querySelector(`.${sectionId}`); // Find the section by class name
+  if (section) {
+    const offset = 130; // Adjust this value if you need to account for fixed headers or spacing
+    const sectionPosition = section.offsetTop - offset; // Get the section's position minus the offset
+    const currentPosition = window.scrollY; // Get the current scroll position
+    const distance = sectionPosition - currentPosition; // Calculate the distance to scroll
+    const duration = 1000; // Duration in milliseconds
+    const startTime = performance.now(); // Start time of the animation
+
+    // Smooth scrolling animation
+    function animateScroll(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1); // Progress between 0 and 1
+      const easeInOutQuad = progress < 0.5
+        ? 2 * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 2) / 2; // Ease-in-out effect
+      window.scrollTo(0, currentPosition + distance * easeInOutQuad); // Scroll to the new position
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll); // Continue animation
+      }
+    }
+
+    requestAnimationFrame(animateScroll); // Start the animation
+  }
+}
+
+
+</script>
+
+
+<!--side animation for sections-->
+<script>
+  document.addEventListener("scroll", () => {
+    const isMobile = window.innerWidth <= 768; // Adjust breakpoint if needed
+
+    document.querySelectorAll(".scroll-animate").forEach((el) => {
+      const elementPosition = el.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.1;
+
+      // Trigger animation only once
+      if (elementPosition < screenPosition && !el.dataset.animated) {
+        el.classList.add("active");
+        el.dataset.animated = "true"; // Mark as animated
+      }
+    });
+  });
+
+  // Home-screen animation: Slide logo up from bottom
+  window.addEventListener("load", () => {
+    document.querySelectorAll(".title-animate").forEach((el) => {
+      setTimeout(() => {
+        el.classList.add("title-active");
+      }, 5);
+    });
+  });
+</script>
+
+
+<!--Java for the slide up and down for the nav bar scroll animation-->
+<script>
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+const triggerHeight = window.innerHeight * 0.71; // 69vh from the top
+
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (window.innerWidth > 1025) { // Only apply for desktop widths
+    if (scrollTop > triggerHeight) {
+      if (scrollTop > lastScrollTop) {
+        // Scroll Down - Hide Navbar
+        navbar.classList.add("nav-hidden");
+      } else {
+        // Scroll Up - Show Navbar
+        navbar.classList.remove("nav-hidden");
+      }
+    } else {
+      // If not past 69vh, keep navbar visible
+      navbar.classList.remove("nav-hidden");
+    }
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
+</script>
+  </body>
+  </html>
+  

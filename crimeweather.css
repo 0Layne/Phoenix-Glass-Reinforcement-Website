@@ -1,0 +1,426 @@
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(37, 37, 37);
+    color: #ffffff;
+  }
+/* this is the animation css*/
+.scroll-animate {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.scroll-animate-right {
+  transform: translateX(100%);
+}
+
+.scroll-animate.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* this is the animation css*/
+/* Scroll In: From Left */
+.scroll-animate {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1.3s ease, opacity 1.3s ease;
+  /* Slowed down */
+}
+
+/* Slide In: When in View */
+.scroll-animate.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Reset animation when scrolling back up */
+.scroll-animate:not(.active) {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/* Scroll Out: To Right (when scrolling past threshold) */
+.scroll-out {
+  opacity: 0;
+  transform: translateX(100%);
+  /* Now slides OUT to the right */
+  transition: transform 1.3s ease, opacity 1.3s ease;
+  /* Slowed down */
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-bottom: 4px solid rgb(255, 255, 255);
+  flex-direction: column;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* Adds spacing between the logo and text */
+}
+
+#home-logo-title {
+  background-image: url(phxlogotextwhite.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 80vh;
+  height: 25vh;
+}
+
+.home p {
+  font-size: 2rem;
+  max-width: 700px;
+  line-height: 1.3;
+  margin-top: 2vh;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px); /* Start below the normal position */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: translateY(0); /* End at the normal position */
+        opacity: 1; /* End fully visible */
+    }
+}
+
+.animate-section {
+    animation: slideUp 1s ease-out; /* Apply the slide-up animation */
+}
+
+
+
+/* Style for the arrow */
+.scroll-arrow {
+  font-size: 1.3rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: absolute;
+  /* Keep it within the .section-border */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 45px;
+  line-height: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 1.5s infinite;
+  transition: color 0.3s ease;
+  z-index: 9900;
+}
+
+.scroll-arrow:hover {
+  background: #BB9D20;
+  color: #fff;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+
+
+
+
+  .crime-header {
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+
+  .crime-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .crime-header p {
+    font-size: 1.2rem;
+  }
+
+  .crime-intro,
+  .security-solutions {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15vh;
+  }
+ .crime-intro {
+   max-width: 90%;
+   width: 100%;
+   margin: 50px auto;
+   padding: 20px;
+   border-radius: 8px;
+   text-align: center;
+   margin-bottom: 30vh;
+ }
+  .line-title{
+    width: 550px;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 0vh;
+    margin-top: 5vh;
+  }
+  .line1-title{
+    width: 550px;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+    margin-left: 2vh;
+  }
+  .security-text{
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    max-width: 90%;
+    width: 100%;
+    margin: 50px auto;
+    border-radius: 8px;
+  }
+  .security-text1{
+    margin-top: 15vh;
+  }
+  .security-text p{
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+
+  }
+  h1{
+    color: white;
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+  }
+  h2{
+    color: #ffffff;
+    font-size: 5vh;
+    font-weight: 400;
+    text-align: left;
+  }
+  h3 {
+    color: #ffffff;
+    font-size: 3vh;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+
+#ulul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Centers the items horizontally */
+    align-items: flex-start;
+    gap: 15px;  /* Adds spacing between list items */
+    padding: 0;
+    max-width: 800px;  /* Adjust width to fit section */
+    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lili {
+    background: none;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%; /* Ensures items don't overflow */
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+  .solution {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+
+  .weather-protection {
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+  }
+
+  .weather-protection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .weather-protection h2,
+  .weather-protection h3 {
+    color: #fff;
+  }
+
+  .weather-protection p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .weather-protection ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .weather-protection ul li {
+    background-size: 20px;
+    padding-left: 30px;
+    margin: 10px 0;
+  }
+
+  .solution {
+    margin: 40px auto;
+    max-width: 800px;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+  }
+
+  .cta-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+.animated-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  padding-bottom: 5px;
+  margin-top: 2vh;
+}
+
+.animated-button .arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.arrow {
+  margin-right: 5vh;
+}
+
+/* Underline effect */
+.animated-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.animated-button:hover::after {
+  width: 100%;
+}
+
+.animated-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Reverse effect when un-hovering */
+.animated-button::after {
+  transition: width 0.3s ease-in-out;
+}
+
+.animated-button:hover::after {
+  width: 100%;
+}
+
+.animated-button:not(:hover)::after {
+  width: 0;
+  transition: width 0.3s ease-in-out 0.2s;
+}
+
+
+
+
+

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="phxlogo.png" type="image/png">
+  <title>Crime Protection - ShieldX</title>
+
+  <link rel="stylesheet" href="navtab.css">
+  <link rel="stylesheet" href="crimeweather.css">
+  <link rel="stylesheet" href="crimeweathermobile.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+</head>
+
+<body>
+
+<nav id="navbar">
+  <div class="nav-left">
+    <ul id="nav-links">
+      <li><a href="index.html#section1"><i style="color: #A5A5A8;" class="fa-solid fa-house home-icon"></i></a></li>
+      <li class="dash">|</li>
+      <li><a href="index.html#section4-5">About</a></li>
+      <li class="dash">|</li>
+      <li><a href="ourwork.html">Services</a></li>
+      <li class="dash">|</li>
+      <li><a href="index.html#security-section">Our Work</a></li>
+      <li class="dash">|</li>
+      <li><a href="ourwork.html#contact-box">Contact</a></li>
+      <li class="dash">|</li>
+      <li><a href="index.html#section6">Media</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <button class="schedule-btn" onclick="window.location.href='ourwork.html#contact-box'">Request a Free Quote</button>
+    <a href="#" class="logo hidden"><img class="carsen-logo" src="phxlogo.png" alt="Logo"></a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</nav>
+
+<!--schedule/call button to logo animation-->
+<script>
+  document.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+    const logo = document.querySelector(".nav-right .logo");
+    if (window.scrollY > 650) {
+      navbar.classList.add("scrolled");
+      logo.classList.remove("hidden");
+    } else {
+      navbar.classList.remove("scrolled");
+      logo.classList.add("hidden");
+    }
+  });
+
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+
+</script>
+
+
+
+
+<section class="home">
+  <video autoplay loop muted playsinline class="bg-video">
+    <source src="video/crimeweathervideo.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
+  <div class="home-content">
+    <div id="home-logo-title" class="animate-section"></div>
+    <p class="animate-section">Contact us today for a free quote to secure your home or business with advanced window
+      reinforcement.</p>
+  </div>
+</section>
+
+
+  <div class="scroll-arrow" onclick="scrollToSection('security-text')">
+    <i class="fa-solid fa-arrow-down" style="color: white;"></i> <!-- Down arrow icon -->
+  </div>
+
+
+
+
+    <div class="security-text security-text1">
+    <h1 class="scroll-animate">Why Security Matters in High-Crime Areas</h1>
+      <hr class="line-title scroll-animate">
+    <p class="scroll-animate">Crime rates vary across the U.S., with certain states and cities experiencing significantly higher burglary,
+      vandalism, and property crime incidents. In high-crime areas, reinforcing vulnerable entry points can be the
+      difference between security and intrusion.</p>
+    </div>
+  <section class="crime-intro">
+    <h2 class="scroll-animate">Top 10 High-Crime States & Cities</h2>
+    <ul id="ulul" class="scroll-animate">
+      <li class="lili">🔹 **St. Louis, MO** – One of the highest burglary and violent crime rates.</li>
+      <li class="lili">🔹 **Detroit, MI** – Frequent break-ins and home invasions.</li>
+      <li class="lili">🔹 **Baltimore, MD** – High rates of vandalism and theft.</li>
+      <li class="lili">🔹 **Memphis, TN** – A significant number of forced entries.</li>
+      <li class="lili">🔹 **Kansas City, MO** – Increasing business vandalism cases.</li>
+      <li class="lili">🔹 **New Orleans, LA** – Notorious for break-ins and looting.</li>
+      <li class="lili">🔹 **Cleveland, OH** – A growing trend in property crimes.</li>
+      <li class="lili">🔹 **Oakland, CA** – High rates of home and business burglaries.</li>
+      <li class="lili">🔹 **Little Rock, AR** – Increasing security concerns in residential areas.</li>
+      <li class="lili">🔹 **Stockton, CA** – Frequently targeted for smash-and-grab crimes.</li>
+    </ul>
+  </section>
+
+  <section class="security-solutions">
+    <h2 class="scroll-animate">Security Solutions for Crime Prevention</h2>
+    <div class="solution">
+      <h3 class="scroll-animate">🔹 Security Film for Windows</h3>
+      <p class="scroll-animate">Security window film adds an extra layer of protection by making glass more shatter-resistant. This deters
+        burglars who attempt to break windows to gain entry.</p>
+      <ul id="ulul" class="scroll-animate">
+        <li class="lili">✅ Holds glass together upon impact.</li>
+        <li class="lili">✅ Reduces smash-and-grab burglary attempts.</li>
+        <li class="lili">✅ Available in clear and tinted options.</li>
+      </ul>
+    </div>
+
+    <div class="solution">
+      <h3 class="scroll-animate">🔹 Window & Door Frame Reinforcement</h3>
+      <p class="scroll-animate">Reinforcing frames strengthens the most commonly targeted entry points, making forced entry much more
+        difficult.</p>
+      <ul id="ulul" class="scroll-animate">
+        <li class="lili">✅ Prevents doors from being kicked in.</li>
+        <li class="lili">✅ Enhances window durability against prying and impacts.</li>
+        <li class="lili">✅ Adds extra security without affecting appearance.</li>
+      </ul>
+    </div>
+
+    <div class="solution">
+      <h3 class="scroll-animate">🔹 High-Security Door Locks</h3>
+      <p class="scroll-animate">Advanced locks provide increased protection against lock-picking and forced entry.</p>
+      <ul id="ulul" class="scroll-animate">
+        <li class="lili">✅ Deadbolts with reinforced strike plates.</li>
+        <li class="lili">✅ Smart locks with keyless entry options.</li>
+        <li class="lili">✅ Resistant to lock bumping and drilling.</li>
+      </ul>
+    </div>
+  </section>
+
+
+  
+<div class="security-text">
+    <h1 class="scroll-animate">Weather Protection & Reinforcement</h1>
+      <hr class="line-title scroll-animate">
+    <p class="scroll-animate">Extreme weather events, including hurricanes, heavy storms, and tornadoes, can cause devastating damage to homes
+      and businesses. Protecting entry points from wind, debris, and pressure changes is critical for minimizing
+      destruction.</p>
+</div>
+
+  <section class="security-solutions">
+    <h3 class="scroll-animate">🔹 How Weather Damage Affects Structures</h3>
+    <ul id="ulul" class="scroll-animate">
+      <li class="lili">🌪️ **High winds** can break windows and doors, leading to interior destruction.</li>
+      <li class="lili">🌊 **Heavy rain and flooding** cause structural weakening and mold buildup.</li>
+      <li class="lili">⚡ **Hail and debris impact** can shatter glass and compromise security.</li>
+      <li class="lili">🔥 **Extreme heat and UV exposure** can weaken window films and frames over time.</li>
+    </ul>
+  
+    <h2 style="margin-top: 20vh;" class="scroll-animate">Solutions for Weather Protection</h2>
+    <div class="solution">
+      <h3 class="scroll-animate">🔹 Security & Storm-Resistant Window Film</h3>
+      <p class="scroll-animate">Specialized window film strengthens glass, reducing shattering from high winds and debris impact.</p>
+      <ul id="ulul" class="scroll-animate">
+        <li class="lili">✅ Holds shattered glass together upon impact.</li>
+        <li class="lili">✅ Helps withstand hurricane-force winds.</li>
+        <li class="lili">✅ Reduces UV exposure that weakens materials.</li>
+      </ul>
+    </div>
+  
+    <div class="solution">
+      <h3 class="scroll-animate">🔹 Reinforced Door & Window Frames</h3>
+      <p class="scroll-animate">Reinforcing frames increases resistance to high-speed winds and pressure changes caused by storms.</p>
+      <ul id="ulul" class="scroll-animate">
+        <li class="lili">✅ Prevents frame warping from wind and rain.</li>
+        <li class="lili">✅ Strengthens entry points against forced pressure.</li>
+        <li class="lili">✅ Improves long-term durability in extreme conditions.</li>
+      </ul>
+    </div>
+  
+    <div class="solution">
+      <h3 class="scroll-animate">🔹 Weather-Resistant Locking Systems</h3>
+      <p class="scroll-animate">High-security locks designed for extreme weather conditions ensure entry points remain secure.</p>
+      <ul id="ulul" class="scroll-animate">
+        <li class="lili">✅ Corrosion-resistant materials for longevity.</li>
+        <li class="lili">✅ Reinforced deadbolts to prevent storm-related failures.</li>
+        <li class="lili">✅ Works in extreme temperatures and moisture exposure.</li>
+      </ul>
+    </div>
+  
+    <div class="cta-section">
+      <a href="ourwork.html#contact-box" class="animated-button" target="_blank">Contact Now
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+
+
+
+
+<!--arrow drop down border-->
+<script>
+function scrollToSection(target) {
+  const section = document.getElementById(target) || document.querySelector(`.${target}`); // Find by ID or class
+  
+  if (section) {
+    const offset = 130; // Adjust this for fixed headers
+    const sectionPosition = section.offsetTop - offset;
+    const currentPosition = window.scrollY;
+    const distance = sectionPosition - currentPosition;
+    const duration = 1000; // Scroll duration (ms)
+    const startTime = performance.now();
+
+    function animateScroll(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeInOutQuad = progress < 0.5
+        ? 2 * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+      window.scrollTo(0, currentPosition + distance * easeInOutQuad);
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    }
+
+    requestAnimationFrame(animateScroll);
+  }
+}
+
+</script>
+
+
+
+<!--side animation for sections-->
+<script>
+document.addEventListener("scroll", () => {
+  const isMobile = window.innerWidth <= 768; // Adjust breakpoint if needed
+
+  document.querySelectorAll(".scroll-animate").forEach((el) => {
+    const elementPosition = el.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.1;
+
+    // Trigger animation only once
+    if (elementPosition < screenPosition && !el.dataset.animated) {
+      el.classList.add("active");
+      el.dataset.animated = "true"; // Mark as animated
+    }
+  });
+});
+
+// Home-screen animation: Slide logo up from bottom
+window.addEventListener("load", () => {
+  document.querySelectorAll(".title-animate").forEach((el) => {
+    setTimeout(() => {
+      el.classList.add("title-active");
+    }, 5);
+  });
+});
+</script>
+
+
+
+<!-- Java Hamburger menu-->
+<script>
+ 
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+
+  // Smooth Scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      // Only handle internal links
+      if (this.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          // Get the navbar height
+          const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+          // Calculate the position to scroll to
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+          // Scroll to the calculated position
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+
+          // Close the mobile menu after clicking a link
+          if (navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('open');
+          }
+        }
+      }
+    });
+  });
+</script>
+
+
+
+<!--Java for the slide up and down for the nav bar scroll animation-->
+<script>
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+const triggerHeight = window.innerHeight * 0.71; // 69vh from the top
+
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (window.innerWidth > 1025) { // Only apply for desktop widths
+    if (scrollTop > triggerHeight) {
+      if (scrollTop > lastScrollTop) {
+        // Scroll Down - Hide Navbar
+        navbar.classList.add("nav-hidden");
+      } else {
+        // Scroll Up - Show Navbar
+        navbar.classList.remove("nav-hidden");
+      }
+    } else {
+      // If not past 69vh, keep navbar visible
+      navbar.classList.remove("nav-hidden");
+    }
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
+</script>
+</body>
+
+</html>

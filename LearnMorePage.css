@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  height: auto;
+  display: block;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  padding-bottom: 0;
+  text-align: center;
+  background-color: rgb(37, 37, 37);
+}
+
+.animate-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* this is the animation css*/
+.scroll-animate {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.scroll-animate-right {
+  transform: translateX(100%);
+}
+
+.scroll-animate.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* this is the animation css*/
+/* Scroll In: From Left */
+.scroll-animate {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1.3s ease, opacity 1.3s ease;
+  /* Slowed down */
+}
+
+/* Slide In: When in View */
+.scroll-animate.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Reset animation when scrolling back up */
+.scroll-animate:not(.active) {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+
+
+#section1 {
+  height: 69vh;
+  background-image: url(photo/slider1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  z-index: 1;
+}
+
+#section1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.649);
+  z-index: -1;
+  pointer-events: none;
+}
+.title {
+  color: rgb(255, 255, 255);
+  margin-top: 195px;
+  font-size: 94px;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  font-family: "Abril Fatface", serif;
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+  z-index: 3;
+}
+
+.title-lower::after {
+  content: "\A";
+  white-space: pre;
+  /* Or pre-wrap */
+}
+
+.title-lower {
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  font-family: "Abril Fatface", serif;
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+  z-index: 3;
+  line-height: 0;
+}
+.section-border {
+  height: 4px;
+  background-color: #A5A5A8;
+  margin-bottom: 30vh;
+}
+.scroll-arrow {
+  font-size: 1.3rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: relative;
+  margin: 0px auto;
+  width: 45px;
+  height: 45px;
+  line-height: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-arrow:hover {
+  background: #3f469e;
+  color: #fff;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+
+
+
+.line1{
+  background-color: #ffffff;
+  width: 450px;
+  margin-left: 5vh;
+  height: 2px;
+  border: none;
+  margin-bottom: 4vh;
+}
+.service1{
+  margin-top: 10vh;
+  padding-left: 175px;
+  padding-right: 175px;
+  line-height: 1.3;
+  padding-bottom: 20vh;
+}
+.service1 p{
+  font-size: 1.4rem;
+  color: white;
+  font-family: 700;
+}
+.service1 h2{
+  color: white;
+  margin-top: 15vh;
+  text-align: left;
+  font-size: 3rem;
+  margin-left: 6vh;
+}
