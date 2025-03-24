@@ -1321,6 +1321,7 @@
     font-size: 0.8rem !important;
     font-family: bold !important;
     padding: 8px !important;
+    padding-bottom: 0px !important;
     margin-top: 5px !important;
   }
 
@@ -1443,7 +1444,7 @@
     padding-right: 0px;
     padding-bottom: 0px;
     width: 13vh !important;
-    height: 13vh !important;
+    height: 15vh !important;
   }
 
   .service-box:hover{
@@ -1451,6 +1452,9 @@
 }
    .service-details {
     font-size: 0.7rem;
+    padding: 0px !important;
+    margin: 0px !important;
+    line-height: 2;
   }
 
   /* Ensure .box-content stacks elements properly */
@@ -1459,11 +1463,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding: 0px;
+    margin: 0px;
   }
   .box-content h3 {
     font-size: 0.9rem !important;
     font-family: 500;
     margin-top: 8;
+    margin-bottom: 0px;
     padding: 6.5px;
   }
 
@@ -1489,12 +1496,12 @@
 
 
  #section4-5 {
-   height: 140vh !important;
+   height: 170vh !important;
    width: 100%;
    padding: 0px !important;
    margin: 0 auto !important;
    padding-top: 10vh !important;
-   background-size: 190%;
+   background-size: 90%;
   background-position: right center;
  }
  .text-box4-5{
@@ -1535,6 +1542,8 @@
 }
 .line4-5{
   width: 200px;
+  align-items: center;
+  margin: 0 auto;
 }
 
 
@@ -1783,6 +1792,7 @@
     font-size: 0.5rem;
   }
 }
+
 @media (max-width: 376px) {
   #section4-5 {
    height: 170vh !important;
@@ -1841,6 +1851,7 @@
    width: 200px;
  }
 }
+
 @media (max-width: 360px) and (hover: none) {
 
  .services-section {
