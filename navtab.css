@@ -1,4 +1,4 @@
-* {
+  * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,8 +8,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 10px 20px;
+  padding: 2.5vh 20px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -21,7 +20,6 @@ nav {
   background-size: 300% 300%;
   background-position: center;
   animation: color 12s ease-in-out infinite;
-  transition: transform 0.5s ease-in-out;
 }
 
 @keyframes color {
@@ -37,37 +35,20 @@ nav {
     background-position: 0% 50%;
   }
 }
-.nav-hidden {
-  transform: translateY(-100%);
-}
+
 
 .schedule-btn {
   background: #d2cfcf;
-  margin: 0 auto;
   color: #000000;
   padding: 11px 20px;
+  font-weight: 600;
+  font-family: 800;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
   display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  position: relative; /* Ensures it animates correctly */
-  animation: bounce 1.5s infinite; /* Apply the bounce animation */
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
 }
 
 .schedule-btn:hover {
@@ -77,35 +58,25 @@ nav {
 
 .nav-left {
   display: flex;
+  margin: 0 auto;
   align-items: center;
-  justify-content: center;
-  /* Center aligns links */
-  flex: 1;
-  /* Allows it to take available space */
-}
-
-#nav-links {
-  display: flex;
-  gap: 3vh;
-  list-style: none;
-  color: #A5A5A8;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  gap: 15px;
 }
 
 .nav-right {
-    display: flex;
-    align-items: center;  /* Ensures vertical alignment */
-    gap: 10px;
-    position: relative;   /* Change from absolute to relative */
-    right: 0;
-    margin: 0 auto;             /* Reset positioning */
+  position: absolute;
+  right: 10vh;
+  display: flex;
+  gap: 10px;
 }
+
 
 .logo {
   display: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+
 
 .carsen-logo {
   width: 6vh;
@@ -142,8 +113,8 @@ ul {
 
 ul li a {
   color: rgb(255, 255, 255);
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 800;
+  font-size: 1.1rem;
   text-decoration: none;
   transition: background-color 0.3s ease;
 
@@ -166,6 +137,10 @@ nav.scrolled .nav-right .logo {
   transform: translateX(0);
 }
 
+#nav-links {
+  margin-left: 3vh;
+  margin-top: 2vh;
+}
 
 
 
@@ -284,9 +259,6 @@ nav.scrolled .nav-right .logo {
   color: #d2cfcf;
   font-size: 0.8rem;
 }
-
-
-
 
 
 @media screen and (max-width: 1250px){
@@ -951,6 +923,7 @@ font-size: 1rem;
     text-align: center;
     padding-top: 0vh !important;
   }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -1556,10 +1529,13 @@ font-size: 1rem;
     width: 100%;
   }
 
-  ul.open {
-    height: 280px;
-    padding-top: 20px;
-  }
+  #nav-links.open {
+  height: 280px;
+  padding-top: 20px;
+  display: flex;
+}
+
+
 
   ul li a {
     padding: 15px 0;
@@ -1644,7 +1620,7 @@ font-size: 1rem;
 }
 
 @media screen and (max-width: 400px) {
-    .hamburger div {
+     .hamburger div {
         width: 3.5vh;
         margin: 4px;
         height: 2px;
@@ -1656,7 +1632,7 @@ font-size: 1rem;
   ul {
     width: 100%;
     position: absolute;
-    top: 25px !important;
+    top: 2.8vh !important;
     height: 0;
     right: 0;
     flex-direction: column;
@@ -1693,7 +1669,6 @@ font-size: 1rem;
     height: 280px;
     padding-top: 20px;
   }
-
   ul li a {
     padding: 15px 0;
     font-size: 1rem;
@@ -1710,8 +1685,6 @@ font-size: 1rem;
   .hamburger.open div:nth-child(3) {
     transform: rotate(360deg) translate(0px);
   }
-
-
 
   
   .line3 {
@@ -1772,9 +1745,15 @@ font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 376px) {
+ ul{
+  top: 3.8vh !important; 
+ }
+}
 
-  .hamburger div {
+
+@media screen and (max-width: 360px) {
+.hamburger div {
     width: 3.5vh;
     margin: 4px;
     height: 2px;
@@ -1796,24 +1775,24 @@ font-size: 1rem;
     transition: height 0.6s ease;
     border-radius: 3px;
     background: linear-gradient(45deg, rgb(46, 45, 45), #000000ab, rgba(43, 42, 42, 0.876), #0505055c);
-  background-size: 300% 300%;
-  background-position: center;
-  animation: color 12s ease-in-out infinite;
-}
-
-@keyframes color {
-  0% {
-    background-position: 0% 50%;
+    background-size: 300% 300%;
+    background-position: center;
+    animation: color 12s ease-in-out infinite;
   }
 
-  50% {
-    background-position: 100% 50%;
-  }
+  @keyframes color {
+    0% {
+      background-position: 0% 50%;
+    }
 
-  100% {
-    background-position: 0% 50%;
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
-}
 
   ul li {
     text-align: center;
@@ -1908,7 +1887,7 @@ font-size: 1rem;
 
 
 @media (max-width: 1025px) and (min-width: 1023px) and (max-height: 601px) and (min-height: 599px) {
-    .hamburger div {
+  .hamburger div {
     width: 5vh;
     margin: 4px;
     height: 2.7px;
@@ -1933,15 +1912,18 @@ font-size: 1rem;
     background-position: center;
     animation: color 12s ease-in-out infinite;
   }
-.carsen-logo {
-  width: 8vh;
-}
-.phone-btn,
-.schedule-btn {
-  padding: 10px 10px !important;
-  font-size: 1rem !important;
-  margin-left: 5vh;
-}
+
+  .carsen-logo {
+    width: 8vh;
+  }
+
+  .phone-btn,
+  .schedule-btn {
+    padding: 10px 10px !important;
+    font-size: 1rem !important;
+    margin-left: 5vh;
+  }
+
   @keyframes color {
     0% {
       background-position: 0% 50%;
@@ -2032,11 +2014,12 @@ font-size: 1rem;
     align-items: center;
     text-align: center;
   }
-  
+
   .line4 {
     width: 35vh;
     margin: 0 auto;
   }
+
   .copyright {
     font-size: 18px;
   }
