@@ -149,7 +149,7 @@
           slideout.classList.add("show");
         }
       });
-    }, { threshold: 10.5 });
+    }, { threshold: 111.5 });
 
     // Hide slideout when `#section1` is in view
     const hideObserver = new IntersectionObserver((entries) => {
@@ -159,7 +159,7 @@
           slideout.classList.add("hidden");
         }
       });
-    }, { threshold: 10.5 });
+    }, { threshold: 111.5 });
 
     if (showSection) {
       showObserver.observe(showSection);
@@ -570,28 +570,21 @@ function scrollToSection(sectionId) {
 </script>
 
 
-<!-- JavaScript for Hamburger Menu -->
+<!-- Java Hamburger menu-->
 <script>
+
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
 
-  hamburger.addEventListener('click', (event) => {
+  hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
     hamburger.classList.toggle('open');
-    event.stopPropagation(); // Prevents the click from triggering the document click event
-  });
-
-  // Close menu when clicking outside of it
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('open');
-    }
   });
 
   // Smooth Scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+      // Only handle internal links
       if (this.getAttribute('href').startsWith('#')) {
         e.preventDefault();
 
@@ -599,18 +592,24 @@ function scrollToSection(sectionId) {
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
+          // Get the navbar height
           const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+          // Calculate the position to scroll to
           const elementPosition = targetElement.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
 
+          // Scroll to the calculated position
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth'
           });
 
-          // Close menu after clicking a link
-          navLinks.classList.remove('open');
-          hamburger.classList.remove('open');
+          // Close the mobile menu after clicking a link
+          if (navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('open');
+          }
         }
       }
     });
