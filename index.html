@@ -61,7 +61,7 @@
   document.addEventListener("scroll", () => {
     const navbar = document.getElementById("navbar");
     const logo = document.querySelector(".nav-right .logo");
-    if (window.scrollY > 650) {
+    if (window.scrollY > 1100) {
       navbar.classList.add("scrolled");
       logo.classList.remove("hidden");
     } else {
@@ -120,61 +120,6 @@
 
 
 
-
-
-
-
-<div id="discountSlideout" class="discount-slideout hidden">
-  <button id="closeSlideout" class="close-btn">&times;</button>
-  <h1>10% Off</h1>
-  <hr class="percent-line">
-  <div class="percentoff"><p>U.S.<br>Military</p></div>
-  <div class="percentoff"><p>Senior<br>Citizens</p></div>
-  <div class="percentoff"><p>First<br>Responders</p></div>
-</div>
-
-<!--discount pop up-->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const slideout = document.getElementById("discountSlideout");
-    const closeBtn = document.getElementById("closeSlideout");
-    const showSection = document.querySelector(".services-section"); // Section that triggers showing
-    const hideSection = document.getElementById("section1"); // Section that triggers hiding
-
-    // Show slideout when `.services-section` is in view
-    const showObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          slideout.classList.remove("hidden"); // Ensure it's visible
-          slideout.classList.add("show");
-        }
-      });
-    }, { threshold: 111.5 });
-
-    // Hide slideout when `#section1` is in view
-    const hideObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          slideout.classList.remove("show");
-          slideout.classList.add("hidden");
-        }
-      });
-    }, { threshold: 111.5 });
-
-    if (showSection) {
-      showObserver.observe(showSection);
-    }
-    if (hideSection) {
-      hideObserver.observe(hideSection);
-    }
-
-    // Close slideout manually
-    closeBtn.addEventListener("click", () => {
-      slideout.classList.remove("show");
-      slideout.classList.add("hidden");
-    });
-  });
-</script>
 
 
 
@@ -346,11 +291,10 @@
         <h2 class="security-crime scroll-animate">Crime</h2>
         <h2 class="scroll-animate">Protecting Your Property Against Crime</h2>
         <p>
-          In areas with elevated crime rates, safeguarding your home or business is paramount. Implementing security
-          measures such as window films, door and frame reinforcements, and robust lock systems can significantly deter
-          break-ins and vandalism.<span class="mobile-security"> Notably, cities like St. Louis, Detroit, Baltimore, Memphis, and Kansas City have
-          reported higher crime statistics. Enhancing your property's defenses in these regions is essential for peace of
-          mind.
+          In high-crime areas, protecting your home or business is essential. Strengthening security with window films, reinforced
+          doors and frames, and high-quality lock systems can greatly reduce the risk of break-ins and vandalism. These protective
+          measures not only enhance safety but also serve as a powerful deterrent against potential intruders. By investing in
+          reliable security solutions, you can safeguard your property, protect your valuables, and gain lasting peace of mind.<span class="mobile-security"> 
         </p></span>
         <a href="crimeweather.html" class="animated-button scroll-animate" target="_blank">Learn More!
           <span class="arrow">→</span>
@@ -366,15 +310,14 @@
         <h2 class="security-weather scroll-animate">Weather</h2>
         <h2 class="scroll-animate">Weatherproofing Your Property</h2>
       <p>
-        Extreme weather conditions can pose a significant threat to your property, with high winds, flying debris, and
-        heavy storms leading to shattered windows and structural damage. States like Florida, Texas, Louisiana,
-        Alabama, and North Carolina frequently experience hurricanes and severe storms, making reinforcement solutions
-        essential.
+        Extreme weather conditions can pose a serious threat to your property, with high winds, flying debris, and heavy storms
+        causing shattered windows and structural damage. Areas prone to hurricanes and severe storms benefit greatly from
+        reinforcement solutions.
       </p>
       <p class="mobile-security">
-        Installing impact-resistant security film, reinforced window and door frames, and high-strength locking mechanisms
-        can help prevent breakage, reduce interior damage, and protect occupants from hazardous debris. Our solutions ensure
-        your property remains secure, no matter the conditions.
+        Installing impact-resistant security film, reinforced window and door frames, and high-strength locking mechanisms can
+        help prevent breakage, minimize interior damage, and protect occupants from hazardous debris. Our solutions provide
+        reliable protection, ensuring your property remains secure in any conditions
       </p>
         <a href="crimeweather.html" class="animated-button" target="_blank">Learn More!
           <span class="arrow">→</span>
@@ -414,7 +357,6 @@
     <img src="photo/phxvan.png" alt="Placeholder Image" class="content-img">
     <div class="text-box1">
       <h2 class="title4-5">Why Us</h2>
-      <hr class="line4-5">
       <p class="description4-5">
         Phoenix Glass Reinforcement stands out for its commitment to quality and customer satisfaction. Our security
         reinforcements are
@@ -430,7 +372,6 @@
   <div class="container4-5-1">
     <div class="text-box4-5">
       <h2 class="title4-5">About Us</h2>
-      <hr class="line4-5">
       <p class="description4-5 description4-5-1">
         Phoenix Glass Reinforcement, based in Arizona, is committed to enhancing the security of your home or business with
         expert reinforcement solutions. Specializing primarily in glass reinforcement, we also offer frame and door lock
@@ -570,50 +511,39 @@ function scrollToSection(sectionId) {
 </script>
 
 
-<!-- Java Hamburger menu-->
+<!-- JavaScript for Hamburger Menu -->
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
 
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
+  // Ensure elements exist before adding event listeners
+  if (!hamburger || !navLinks) {
+    console.error("❌ ERROR: Hamburger or nav-links not found!");
+    return;
+  }
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    hamburger.classList.toggle('open');
+  // Toggle menu on hamburger click
+  hamburger.addEventListener("click", (event) => {
+    navLinks.classList.toggle("open");
+    hamburger.classList.toggle("open");
+    event.stopPropagation(); // Prevent click from bubbling to document
   });
 
-  // Smooth Scrolling
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      // Only handle internal links
-      if (this.getAttribute('href').startsWith('#')) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          // Get the navbar height
-          const navbarHeight = document.querySelector('.navbar').offsetHeight;
-
-          // Calculate the position to scroll to
-          const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-
-          // Scroll to the calculated position
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-
-          // Close the mobile menu after clicking a link
-          if (navLinks.classList.contains('open')) {
-            navLinks.classList.remove('open');
-            hamburger.classList.remove('open');
-          }
-        }
-      }
-    });
+  // Close menu when clicking outside
+  document.addEventListener("click", (event) => {
+    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+      navLinks.classList.remove("open");
+      hamburger.classList.remove("open");
+    }
   });
+
+  // Prevent menu from closing when clicking inside
+  navLinks.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+});
+
 </script>
 
 
