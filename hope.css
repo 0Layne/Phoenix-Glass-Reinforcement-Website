@@ -501,86 +501,6 @@ body {
 
 
 
-#discountSlideout{
-  border-radius: 5px;
-}
-.discount-slideout {
-  position: fixed;
-  margin: 1vh;
-  top: 35vh;
-  right: -350px;
-  width: 200px;
-  background-image: url(photo/usflag.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 40px;
-  border-radius: 5px;
-  transition: right 0.5s ease-in-out;
-  z-index: 1100;
-}
-.discount-slideout::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.647);
-  border-radius: 5px;
-  z-index: -1;
-  pointer-events: none;
-}
-.discount-slideout.show {
-  right: 0;
-  border-radius: 15px;
-  /* Slides in */
-}
-
-.hidden {
-  display: none;
-  /* Ensure it's removed before sliding in */
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-}
-.close-btn:hover{
-  transform: scale(1.6);
-}
-.percent-line {
-  width: 100%;
-  height: 2px;
-  background: rgb(255, 255, 255);
-  border: none;
-  margin: 10px auto;
-}
-.discount-slideout h1{
-  text-align: center;
-  font-weight: 600;
-}
-.percentoff p{
-  font-size: 1rem;
-  font-weight: 800;
-}
-.percentoff {
-  background: #d2cfcf;
-  color: black;
-  text-align: center;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
 
 
 
@@ -610,7 +530,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(0, 0, 0, 0.6);
+background-color: rgba(0, 0, 0, 0.821);
 /* Dark overlay */
 z-index: 0;
 }
@@ -627,12 +547,12 @@ margin-bottom: 8vh;
   height: 510vh;
 }
 .content-section4-5{
-background-color: rgba(0, 0, 0, 0.368);
-max-width: 200vh;
-padding-top: 10vh;
-padding-bottom: 14vh;
-padding-left: 4vh;
-padding-right: 4vh;
+background-color: rgb(0, 0, 0);
+max-width: 150vh;
+padding-top: 20vh;
+padding-bottom: 20vh;
+padding-left: 7vh;
+padding-right: 7vh;
 height: auto;
 margin-bottom: 15vh;
 border-radius: 7px;
@@ -658,11 +578,7 @@ border-radius: 7px;
 .reverse {
 flex-direction: row-reverse;
 }
-.line4-5{
-  width: 450px;
-  height: 2px;
-  margin-bottom: 1vh;
-}
+
 /* Image Styling */
 .content-img {
 width: 50%;
@@ -673,14 +589,14 @@ border-radius: 10px;
 .content-img4-5{
   border-radius: 10px;
   width: 50%;
-  max-width: 430px;
+  max-width: 400px;
 }
 /* Text Box Styling */
 .text-box1,
 .text-box4-5 {
   flex: 1;
   /* Allows text to take equal space as image */
-  text-align: left;
+  text-align: center;
   /* Align text to the left */
   display: flex;
   flex-direction: column;
@@ -699,7 +615,9 @@ border-radius: 10px;
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
-  max-width: 50%;
+  max-width: 30%;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  margin-bottom: 1vh;
 }
 
 /* Description Styling */
