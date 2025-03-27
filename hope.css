@@ -508,54 +508,61 @@ body {
 
 
 #section4-5 {
-    background-image: url('photo/section4-5background.png');
-    height: 175vh;
-    background-attachment: fixed; /* Creates the fixed effect */
-    background-size: 60%; /* Zooms out by increasing the size percentage */
-    background-position: right center; /* Aligns the background to the left */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15vh 5%;
+  background-image: url('photo/section4-5background.png');
+  height: 175vh;
+  background-attachment: fixed;
+  /* Creates the fixed effect */
+  background-size: 60%;
+  /* Zooms out by increasing the size percentage */
+  background-position: right center;
+  /* Aligns the background to the left */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15vh 5%;
 }
 
 
 /* Overlay for Darkening Effect */
 .overlay1 {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.821);
-/* Dark overlay */
-z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.81);
+  /* Dark overlay */
+  z-index: 0;
 }
 
 /* Content Section */
-.content-section4-5, .content-section1 {
-position: relative;
-z-index: 1;
-width: 100%;
-max-width: 1200px;
-margin-bottom: 8vh;
+.content-section4-5,
+.content-section1 {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 8vh;
 }
-.content-section1{
+
+.content-section1 {
   height: 510vh;
 }
-.content-section4-5{
-background-color: rgb(0, 0, 0);
-max-width: 150vh;
-padding-top: 20vh;
-padding-bottom: 20vh;
-padding-left: 7vh;
-padding-right: 7vh;
-height: auto;
-margin-bottom: 15vh;
-border-radius: 7px;
+
+.content-section4-5 {
+  background-color: rgba(0, 0, 0, 0.929);
+  max-width: 150vh;
+  padding-top: 10vh;
+  padding-bottom: 14vh;
+  padding-left: 4vh;
+  padding-right: 4vh;
+  height: auto;
+  margin-bottom: 15vh;
+  border-radius: 7px;
 }
 
 /* Flexbox Container for Image & Text */
@@ -567,6 +574,7 @@ border-radius: 7px;
   flex-wrap: wrap;
   /* Prevents layout breaking on smaller screens */
 }
+
 .container4-5-1 {
   display: flex;
   justify-content: space-between;
@@ -574,50 +582,62 @@ border-radius: 7px;
   align-items: center;
   margin: 0 auto;
 }
+
 /* Reverse Layout for Second Section */
 .reverse {
-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.line4-5 {
+  width: 250px;
+  height: 2px;
+  margin-bottom: 1vh;
 }
 
 /* Image Styling */
 .content-img {
-width: 50%;
-max-width: 600px;
-margin-right: 8vh;
-border-radius: 10px;
+  width: 50%;
+  max-width: 600px;
+  margin-right: 8vh;
+  border-radius: 10px;
 }
-.content-img4-5{
+
+.content-img4-5 {
   border-radius: 10px;
   width: 50%;
-  max-width: 400px;
+  max-width: 430px;
 }
+
 /* Text Box Styling */
 .text-box1,
 .text-box4-5 {
   flex: 1;
   /* Allows text to take equal space as image */
-  text-align: center;
+  text-align: left;
   /* Align text to the left */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.text-box1{
+
+.text-box1 {
   margin-left: 3vh;
 }
+
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensures spacing between elements */
-  gap: 40px; /* Adds spacing between text and image */
+  justify-content: space-between;
+  /* Ensures spacing between elements */
+  gap: 40px;
+  /* Adds spacing between text and image */
 }
+
 .title4-5 {
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
   max-width: 50%;
-  border-bottom: 2px solid rgb(255, 255, 255);
-  margin-bottom: 1vh;
 }
 
 /* Description Styling */
