@@ -512,39 +512,50 @@ function scrollToSection(sectionId) {
 </script>
 
 
-<!-- JavaScript for Hamburger Menu -->
+<!-- Java Hamburger menu-->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
 
-  // Ensure elements exist before adding event listeners
-  if (!hamburger || !navLinks) {
-    console.error("❌ ERROR: Hamburger or nav-links not found!");
-    return;
-  }
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
 
-  // Toggle menu on hamburger click
-  hamburger.addEventListener("click", (event) => {
-    navLinks.classList.toggle("open");
-    hamburger.classList.toggle("open");
-    event.stopPropagation(); // Prevent click from bubbling to document
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open');
   });
 
-  // Close menu when clicking outside
-  document.addEventListener("click", (event) => {
-    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
-      navLinks.classList.remove("open");
-      hamburger.classList.remove("open");
-    }
-  });
+  // Smooth Scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      // Only handle internal links
+      if (this.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
 
-  // Prevent menu from closing when clicking inside
-  navLinks.addEventListener("click", (event) => {
-    event.stopPropagation();
-  });
-});
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
 
+        if (targetElement) {
+          // Get the navbar height
+          const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+          // Calculate the position to scroll to
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+          // Scroll to the calculated position
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+
+          // Close the mobile menu after clicking a link
+          if (navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('open');
+          }
+        }
+      }
+    });
+  });
 </script>
 
 
