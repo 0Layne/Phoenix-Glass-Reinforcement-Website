@@ -1883,7 +1883,82 @@ font-size: 1rem;
 }
 
 
+@media (max-width: 1181px) and (min-width: 1180px) and (max-height: 821px) and (min-height: 820px) {
+  ul {
+    width: 100%;
+    position: absolute;
+    top: 55px;
+    height: 0;
+    right: 0;
+    flex-direction: column;
+    width: 255px;
+    overflow: hidden;
+    transition: height 0.6s ease;
+    background: linear-gradient(45deg, rgb(46, 45, 45), #000000ab, rgba(43, 42, 42, 0.876), #0505055c);
+    background-size: 300% 300%;
+    background-position: center;
+    animation: color 12s ease-in-out infinite;
+  }
 
+  .line3 {
+    width: 25vh;
+    height: 2px;
+  }
+
+  .social-logo {
+    margin-bottom: 2vh;
+    width: 15vh;
+  }
+
+  .social-buttons {
+    gap: 40px;
+    display: block;
+  }
+
+  .social-buttons1 {
+    display: none;
+  }
+
+  #section6 {
+    padding-top: 0;
+    height: 45vh !important;
+    width: 100%;
+  }
+
+  #nav-links-social {
+    display: none;
+  }
+
+  .social-tabs {
+    margin-top: 0vh;
+    margin-bottom: 5vh;
+  }
+
+  .social-tab-link {
+    font-size: 2rem;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+  }
+
+  .numemail {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+
+  .phone,
+  .email {
+    font-size: 1rem;
+  }
+}
 
 
 @media (max-width: 1025px) and (min-width: 1023px) and (max-height: 601px) and (min-height: 599px) {
