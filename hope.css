@@ -381,10 +381,12 @@ body {
 
 .services-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
   padding: 5vh 20vh;
-  flex-wrap: wrap;
   padding-bottom: 10vh;
+  flex-wrap: nowrap; /* Prevents wrapping */
+  overflow-x: auto; /* Enables horizontal scrolling if needed */
 }
 .service-space{
   display: none;
